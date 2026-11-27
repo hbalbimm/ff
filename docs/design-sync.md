@@ -10,7 +10,7 @@ Claude **Design System** artifact, so it can move between them without conversio
 2. **Change a token** (colour, type, spacing):
    - In the repo: edit `design-system/tokens.json`, run `npm run tokens`, open a PR.
    - Then sync the artifact: in Claude, ask
-     *"Re-sync the FF Design System from GitHub OWNER/ff-website"*. Claude reads the repo,
+     *"Re-sync the FF Design System from GitHub hbalbimm/ff"*. Claude reads the repo,
      merges the new values and keeps usage notes and anything added on the page.
    - Or use Claude Code in a checkout: run `/design-sync` to republish the artifact
      straight from this codebase. (That makes the artifact read-only on the page, so edits

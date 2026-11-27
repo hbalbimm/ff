@@ -1,5 +1,7 @@
 # Forward Financing website
 
+Repo: https://github.com/hbalbimm/ff · Preview (after Pages is on): https://hbalbimm.github.io/ff/
+
 Design tokens, component library and responsive page templates for the
 Forward Financing website rebuild (BIMM).
 
