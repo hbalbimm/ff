@@ -8,9 +8,9 @@
   --ink-inverse: #ffffff;
   --border: #d6d6d1;
   --border-strong: #8a8a84;
-  --accent: #2f5d50;
-  --accent-hover: #244a40;
-  --accent-soft: #e3ece8;
+  --accent: #c2410c;
+  --accent-hover: #9a3412;
+  --accent-soft: #ffedd5;
   --focus: var(--accent);
 
   /* spacing */
