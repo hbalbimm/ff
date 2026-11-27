@@ -7,8 +7,8 @@ Three places stay in sync:
 
 | Where | What it holds | Who edits |
 | --- | --- | --- |
-| **FF Design System** (Claude artifact) | Browsable tokens, type, components, brand guidelines | Design team |
-| **FF Website Design** (Claude Design canvas) | Responsive artboards: homepage concepts, templates, components | Design team |
+| [**Forward Financing Design System**](https://claude.ai/artifact/U9dkYhAVpkrDd7KnGPHi9n) (Claude) | Browsable tokens, type, components, brand guidelines | Design team |
+| [**FF Website Design**](https://claude.ai/artifact/YRUxwqPA4RgErqn43wEvqU) (Claude Design canvas) | Responsive artboards: homepage concepts, templates, components | Design team |
 | **This repo** | `design-system/tokens.json` (source of truth) + the HTML/CSS the site is built from | Design + dev, via pull requests |
 
 ## Quick start
