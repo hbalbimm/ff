@@ -20,6 +20,20 @@ Claude **Design System** artifact, so it can move between them without conversio
 4. **Merge to main.** CI checks that `tokens.css` matches `tokens.json`, builds the pages
    and deploys a preview to GitHub Pages.
 
+## Checking for drift
+
+`npm run tokens:compare -- <file>` compares this repo's `tokens.json` with any other copy
+(downloaded from the Design System's Files panel, or the canvas's `ds/ff/tokens.json`) and
+lists every token whose value differs.
+
+The repo's `tokens.css` uses the same variable names as the Design System's generated
+`tokens.css` (`--accent`, `--space-4`, `--radius-m`, `--text-body`, ...), and canvas artboards
+use those variables instead of raw values. So one token value change carries through all three.
+
+**Rule for the team:** change colours and type in the **Design System** (or here, via PR), not
+by recolouring artboards or using the canvas Theme menu on its own. The canvas holds a *copy*
+of the tokens; editing that copy changes only the canvas and creates drift.
+
 ## Recommended setup
 
 - Branch protection on `main`: 1 approval + CI passing.

@@ -4,12 +4,15 @@
   "version": "0.1.0",
   "description": "Forward Financing website: design tokens, component library and responsive page templates.",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "tokens": "node scripts/build-tokens.mjs",
     "tokens:check": "node scripts/build-tokens.mjs --check",
     "build": "npm run tokens && node scripts/build-pages.mjs",
     "dev": "npm run build && npx --yes serve@14.2.4 dist",
-    "check": "npm run tokens:check && node scripts/build-pages.mjs"
+    "check": "npm run tokens:check && node scripts/build-pages.mjs",
+    "tokens:compare": "node scripts/compare-tokens.mjs"
   }
 }

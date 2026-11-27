@@ -56,9 +56,15 @@ const typeRules = [];
 for (const g of type.groups ?? []) {
   for (const s of g.styles ?? []) {
     check(s.name);
-    rootLines.push(`  ${v(s.name)}-size: ${s.fontSize};`, `  ${v(s.name)}-line: ${s.lineHeight};`, `  ${v(s.name)}-weight: ${s.fontWeight};`);
+    const fam = s.family || g.family;
+    // --text-<name> matches the Design System artifact's generated tokens.css,
+    // so the canvas artboards and the website use the same variable names.
+    rootLines.push(
+      `  --text-${s.name}: ${s.fontWeight} ${s.fontSize}/${s.lineHeight} var(--font-${fam});`,
+      `  ${v(s.name)}-size: ${s.fontSize};`, `  ${v(s.name)}-line: ${s.lineHeight};`, `  ${v(s.name)}-weight: ${s.fontWeight};`
+    );
     typeRules.push(
-      `.t-${s.name} { font-family: var(--font-${g.family}); font-size: var(${v(s.name)}-size); line-height: var(${v(s.name)}-line); font-weight: var(${v(s.name)}-weight); }`
+      `.t-${s.name} { font: var(--text-${s.name}); letter-spacing: ${s.letterSpacing ?? 0}; }`
     );
   }
 }
